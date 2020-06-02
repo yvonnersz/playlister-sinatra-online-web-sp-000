@@ -22,7 +22,6 @@ class SongsController < ApplicationController
     # redirect "/songs/#{@song.slug}"
     binding.pry
 
-    @artist = Artist.find_or_create_by(:name => params["Artist Name"])
     @song = Song.create(:name => params["Name"])
     redirect "/songs/#{@song.slug}"
 
