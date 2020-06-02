@@ -32,6 +32,8 @@ class SongsController < ApplicationController
         # update song.artist to value as input by user
         song.artist = Artist.find_or_create_by(name: params[:artist][:name])
       end
+    end
+  end
 
   get '/songs/:slug/edit' do
    @song = Song.find_by_slug(params[:slug])
