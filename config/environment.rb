@@ -23,7 +23,6 @@ ActiveRecord::Base.establish_connection(
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
 require 'rack-flash'
-require '/home/christopher/playlister-sinatra-online-web-sp-000/app/models/concerns/slugifiable.rb'
 require_all 'app'
 require_all 'lib'
 configure :development do
